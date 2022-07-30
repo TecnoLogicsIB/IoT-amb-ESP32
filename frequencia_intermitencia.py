@@ -1,4 +1,4 @@
-""" Control de la freqüència d'intermitència d'un LED """
+""" Control de la freqüència d'intermitència d'un LED amb potenciòmetre """
 
 # importa llibreries
 from machine import Pin, ADC,
