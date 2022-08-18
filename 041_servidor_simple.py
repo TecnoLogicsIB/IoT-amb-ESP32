@@ -1,6 +1,6 @@
 # importa llibreries:
 import socket      # permet crear i gestionar servidors web
-import miwifi      # definició de la connexió a wiFi, desada com a llibreria
+import miwifi      # definició de la connexió a wiFi, desada al dispositiu com a llibreria
 
 # configuració del servidor:
 servidor = socket.socket (socket.AF_INET, socket.SOCK_STREAM)    # objecte socket que he anomenat servidor  
@@ -13,13 +13,11 @@ def pag_web():
     # la variable que he anomenat html conté la definició de la pàgina web en format HTML:
     html = """<html>
               <head> <title>Servidor Web Demo</title>
-              <meta http-equiv="refresh" content="2"> </head>
-              <body> <h1>Servidor Web Demo</h1>
-              <p><strong>Hola, """ + str(addr)+ """</strong></p>
-              <p></p>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head>
+              <body> <p>Mi Servidor</p>
+              <p>Hola, """ + str(addr)+ """</p>
               <p>Servidor web en marxa!</p>
               </body>
-              <style>html{text-align:center}</style>
               </html>"""
     return html     # per poder utilitzar la variable fora de la funció en que està definida
 
@@ -31,6 +29,7 @@ while True:
     conn, addr = servidor.accept()                 # quan un client es connecti, accepta la connexió
     # conn: nou objecte de sòcol per acceptar i enviar dades 
     # addr: variable on es desa l'adreça del client que es vol connectar al servidor
+    addr = str(addr)                               # cal convertir el format a cadena de caracters (string)
     print ('Nova connexió des de', str(addr))      # imprimeix l'adreça del client, desada en la variable addr
 
     peticio = conn.recv(1024)      # desa la sol·licitud rebuda al sòcol en la variable peticio 
@@ -43,4 +42,4 @@ while True:
     conn.send ('Content-Type: text/html\n')
     conn.send ('Connection: close\n\n')
     conn.sendall (pag_web())       # envia com a resposta el text HTML retornat per la funció pag_weg  
-    conn.close()      # tanca el sòcol creat
+    conn.close()                   # tanca el sòcol creat
