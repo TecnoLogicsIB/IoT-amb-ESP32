@@ -1,3 +1,5 @@
+""" servidor que mostra informació en una pàgina web """
+
 # importa llibreries:
 import socket      # permet crear i gestionar servidors web
 import miwifi      # definició de la connexió a wiFi, desada al dispositiu com a llibreria
