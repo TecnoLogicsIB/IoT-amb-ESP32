@@ -6,8 +6,8 @@ from time import sleep           # importa la classe sleep de la llibreria time 
 
 # configuració:
 sensor = ADC (Pin (32))          # crea l'objecte ADC que he anomenat sensor al pin 32
-sensor.width (ADC.WIDTH_10BIT)   # ajust de la resolució (10 bits: valors de 0 a 1023)
-sensor.atten (ADC.ATTN_11DB)     # ajust del rang de lectura (tot el rang de 0 a 3.3V)
+sensor.width (ADC.WIDTH_10BIT)   # si cal: ajust de la resolució (10 bits: valors de 0 a 1023)
+sensor.atten (ADC.ATTN_11DB)     # si cal: ajust del rang de lectura (tot el rang de 0 a 3.3V)
 
 # execució contínua:
 while True:
