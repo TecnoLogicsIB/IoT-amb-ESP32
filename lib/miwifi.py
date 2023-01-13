@@ -2,12 +2,12 @@ import network                    # la llibreria network permet connectar en xar
 from time import sleep            # importa la classe sleep de la llibreria time
 
 # dades xarxa WiFi
-ssid = 'vodafoneE3D9'              # nom de la xarxa
-psw = 'JU7AJW8YFWMWLR'             # contrassenya
+ssid = 'NomXarxa'                 # nom de la xarxa
+psw = 'Cobtrassenya'              # contrassenya
 
 def connecta_WiFi():
     estacio = network.WLAN (network.STA_IF)     # configuració del dispositiu com a estació WiFi (amb el nom que volguem)
-    estacio.active (False)         # desactivació prèvia per si d'acàs
+    #estacio.active (False)         # desactivació prèvia per si d'acàs
     estacio.active (True)          # activa el mode estació
     estacio.connect(ssid, psw)     # connecta a la xarxa definida
     print ("Conectant a WiFi")     # mostra missatge a la consola
