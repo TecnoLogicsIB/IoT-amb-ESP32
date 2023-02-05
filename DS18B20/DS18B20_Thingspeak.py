@@ -1,3 +1,5 @@
+""" Llegeix la temperatura de dos sensors DS18B20 i puja les dades a Thingspeak """
+
 # importa mòduls:
 import onewire, ds18x20    # per interactuar amb el sensor DS18B20
 from machine import Pin    # per interactuar amb els GPIO
