@@ -10,7 +10,7 @@ sensor = ds18x20.DS18X20(onewire.OneWire(Pin(4)))
 
 # cerca l'objecte definit i desa la seva adreça dins la variable adreces, que té format de llista:
 adreces = sensor.scan()                  
-print('Trobats dispositius DS: ', adreces)    # mostra l'adreça trobada
+print('Trobats dispositius DS: ', adreces)    # mostra les adreces trobades
 
 while True:
     sensor.convert_temp()     # llegeix el sensor i converteix les dades
