@@ -1,3 +1,5 @@
+""" Programa senzill per mostrar la temperatura si només utilitzem 1 sensor DS18B20 """
+
 # importa mòduls:
 import onewire, ds18x20    # per interactuar amb el sensor DS18B20
 from machine import Pin    # per interactuar amb els GPIO
@@ -13,8 +15,8 @@ print('Trobat dispositiu DS: ', adreça)    # mostra l'adreça trobada
 while True:
     sensor.convert_temp()     # llegeix el sensor i converteix les dades
     sleep (0.75)              # cal donar temps a realitzar l'acció anterior
-    # variable per desar la temperatura llegida per cada sensor:
-    temperatura = sensor.read_temp(adreça[0])
+    # variable per desar la temperatura llegida pel sensor:
+    temperatura = sensor.read_temp(adreça[0])  # tot i que només hi hagi un element, la variable adreça té format de lista
     # mostra les temperatures (magnitud, valor i unitat):
     print ('T=', temperatura, 'ºC')      
     sleep (5)                 # interval d'actualització: 5 segons
