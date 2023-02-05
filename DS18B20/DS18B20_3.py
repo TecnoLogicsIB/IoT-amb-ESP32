@@ -1,3 +1,5 @@
+""" Llegeix la temperatura de diversos sensors DS18B20 utilitzant un bucle for per recòrrer la llista d'adreces """
+
 # importa mòduls:
 import onewire, ds18x20    # per interactuar amb el sensor DS18B20
 from machine import Pin    # per interactuar amb els GPIO
