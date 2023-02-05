@@ -1,3 +1,5 @@
+""" DS18B20. Mostra la temperatura """
+
 # importa mòduls:
 import onewire, ds18x20    # per interactuar amb el sensor DS18B20
 from machine import Pin    # per interactuar amb els GPIO
@@ -15,10 +17,6 @@ while True:
     sleep (0.75)              # cal donar temps a realitzar l'acció anterior
     for rom in roms:          # per a cada element de la llista roms ...
         #print (rom)          # això mostra l'adreça del dispositiu ds_sensor
-        #print (ds_sensor.read_temp(rom))  # mostra la temperatura
-        print ('T=', ds_sensor.read_temp(rom), 'ºC')
-    sleep (5)                 # interval d'actualització: 5 segons
-    
-    
-    
-    
+        #print (ds_sensor.read_temp(rom))             # mostra la temperatura
+        print ('T=', ds_sensor.read_temp(rom), 'ºC')  # mostra la temperatura: magnitud, valor i unitat
+    sleep (5)                 # interval d'actualització: 5 segons 
