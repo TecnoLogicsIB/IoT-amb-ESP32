@@ -16,8 +16,8 @@ def pag_web():
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-<p><span id="textSliderValue">LLUMINOSITAT_LED</span> %</p>
-<p><input type="range" onchange="updateSliderPWM(this)" id="pwmSlider" min="0" max="100" step="1" value="LLUMINOSITAT_LED" class="slider"></p>
+<p>LLUMINOSITAT LED: <span id="textSliderValue">50</span> %</p>
+<p><input type="range" onchange="updateSliderPWM(this)" id="pwmSlider" min="0" max="100" step="1" class="slider"></p>
 <script>
 function updateSliderPWM(element) {
   var sliderValue = document.getElementById("pwmSlider").value;
