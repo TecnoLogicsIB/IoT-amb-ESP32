@@ -20,15 +20,15 @@ def pag_web():
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-<p>POSICIO SERVO 1: <span id="textSliderValue1">50</span></p>
+<p>POSICIO SERVO 1: <span id="textSliderValue1">90</span></p>
 <p><input type="range" onchange="updateSliderPWM1(this)" id="pwmSlider1" max="180" min="0" step="1" class="slider"></p>
-<p>POSICIO SERVO 2: <span id="textSliderValue2">50</span></p>
+<p>POSICIO SERVO 2: <span id="textSliderValue2">90</span></p>
 <p><input type="range" onchange="updateSliderPWM2(this)" id="pwmSlider2" min="0" max="180" step="1" class="slider"></p>
-<p>POSICIO SERVO 3: <span id="textSliderValue3">50</span></p>
+<p>POSICIO SERVO 3: <span id="textSliderValue3">90</span></p>
 <p><input type="range" onchange="updateSliderPWM3(this)" id="pwmSlider3" min="0" max="180" step="1" class="slider"></p>
-<p>POSICIO SERVO 4: <span id="textSliderValue4">50</span></p>
+<p>POSICIO SERVO 4: <span id="textSliderValue4">90</span></p>
 <p><input type="range" onchange="updateSliderPWM4(this)" id="pwmSlider4" min="0" max="180" step="1" class="slider"></p>
-<p>POSICIO SERVO 5: <span id="textSliderValue5">50</span></p>
+<p>POSICIO SERVO 5: <span id="textSliderValue5">90</span></p>
 <p><input type="range" onchange="updateSliderPWM5(this)" id="pwmSlider5" min="0" max="180" step="5" class="slider"></p>
 <script>
 function updateSliderPWM1(element) {
